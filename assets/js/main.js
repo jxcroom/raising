@@ -1,13 +1,43 @@
-  /**
-   * topslider carousel indicators
-   */
-  let topsliderCarouselIndicators = select("#topslider-carousel-indicators")
-  let topsliderCarouselItems = select('#topsliderCarousel .carousel-item', true)
+(function($) {
 
-  topsliderCarouselItems.forEach((item, index) => {
-    (index === 0) ?
-    topsliderCarouselIndicators.innerHTML += "<li data-bs-target='#topsliderCarousel' data-bs-slide-to='" + index + "' class='active'></li>":
-      topsliderCarouselIndicators.innerHTML += "<li data-bs-target='#topsliderCarousel' data-bs-slide-to='" + index + "'></li>"
-  });
+	"use strict";
 
-  
+	var fullHeight = function() {
+
+		$('.js-fullheight').css('height', $(window).height());
+		$(window).resize(function(){
+			$('.js-fullheight').css('height', $(window).height());
+		});
+
+	};
+	fullHeight();
+
+	var carousel = function() {
+		$('.home-slider').owlCarousel({
+	    loop:true,
+	    autoplay: true,
+	    margin:0,
+	    animateOut: 'fadeOut',
+	    animateIn: 'fadeIn',
+	    nav:true,
+	    dots: true,
+	    autoplayHoverPause: false,
+	    items: 1,
+	    navText : ["<span class='ion-ios-arrow-back'></span>","<span class='ion-ios-arrow-forward'></span>"],
+	    responsive:{
+	      0:{
+	        items:1
+	      },
+	      600:{
+	        items:1
+	      },
+	      1000:{
+	        items:1
+	      }
+	    }
+		});
+
+	};
+	carousel();
+
+})(jQuery);
