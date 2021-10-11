@@ -13,6 +13,8 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
       <link rel="stylesheet" href="assets/css/style.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	  
+	  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
       <style>
          body {
             font-family: Arial, Helvetica, sans-serif;
@@ -673,5 +675,10 @@
             document.documentElement.scrollTop = 0;
          }
       </script>
+	  <script>
+		$(document).bind("contextmenu",function(e){
+		return false;
+		});
+		</script>
    </body>
 </html>
