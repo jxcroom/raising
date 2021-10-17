@@ -178,7 +178,7 @@ a {
   background-color: transparent;
 }
 a:hover {
-  color: #0056b3;
+  color: #212529;
   text-decoration: underline;
 }
 
@@ -10634,7 +10634,7 @@ a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
-
+/* */
 body {
   font-family: "Poppins", Arial, sans-serif;
   font-size: 15px;
@@ -10981,7 +10981,10 @@ h5,
   font-family: "Poppins", sans-serif;
 }
 
-/* ICON QUOTES */
+/* QUOTES */
+.container-fluid-quotes {
+  background-color: #fff;
+}  
 .fa-quote-left {
   color: #ffc451;
 }
@@ -10989,6 +10992,12 @@ h5,
   color: #ffc451;
 }
 
+/* PRODUCT */
+.product-bg {
+background-color: #f1f2f6;
+}
+
+/* CONTACT */
 .contact .info a {
   font-size: 20px;
   background: #ffc451;
